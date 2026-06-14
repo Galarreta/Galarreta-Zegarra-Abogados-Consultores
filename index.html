@@ -366,26 +366,10 @@ p{margin:0;color:var(--gris);font-size:16px;line-height:1.75}.section p+p{margin
     margin-bottom:48px !important;
   }
 }
-/* Encuadre general de secciones en computadora */
+/* Corrección suave de navegación por secciones */
 @media(min-width:701px){
   html{
-    scroll-padding-top:82px !important;
-  }
-
-  section[id]{
-    scroll-margin-top:82px !important;
-  }
-
-  .section{
-    min-height:calc(100vh - 82px) !important;
-    display:flex !important;
-    align-items:center !important;
-    padding-top:72px !important;
-    padding-bottom:72px !important;
-  }
-
-  .section > .container{
-    width:100% !important;
+    scroll-padding-top:88px !important;
   }
 
   #firma,
@@ -394,23 +378,7 @@ p{margin:0;color:var(--gris);font-size:16px;line-height:1.75}.section p+p{margin
   #publicaciones,
   #socios,
   #contacto{
-    min-height:calc(100vh - 82px) !important;
-  }
-
-  #firma .container,
-  #servicios .container,
-  #enfoque .container,
-  #publicaciones .container,
-  #socios .container,
-  #contacto .container{
-    width:100% !important;
-  }
-
-  #enfoque .center,
-  #socios .center,
-  #publicaciones .center,
-  #servicios .center{
-    margin-bottom:44px !important;
+    scroll-margin-top:88px !important;
   }
 }
 </style>
