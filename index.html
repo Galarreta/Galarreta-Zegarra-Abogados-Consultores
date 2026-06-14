@@ -210,18 +210,41 @@ p{margin:0;color:var(--gris);font-size:16px;line-height:1.75}.section p+p{margin
   text-transform:uppercase;
 }
 
-/* Ajuste barra superior en computadora */
+/* Ajuste final de barra superior y distribución general en computadora */
 @media(min-width:701px){
-  .brand img{
-    width:165px !important;
+  :root{
+    --header-h:82px !important;
   }
 
   .header{
-    padding:10px 0 !important;
+    padding:4px 0 !important;
   }
 
   .header-inner{
-    min-height:72px !important;
+    min-height:58px !important;
+  }
+
+  .brand img{
+    width:135px !important;
+  }
+
+  .hero-section{
+    padding-top:82px !important;
+    min-height:100vh !important;
+  }
+
+  .hero-inner{
+    padding-top:10px !important;
+  }
+
+  .section{
+    padding-top:78px !important;
+    padding-bottom:78px !important;
+  }
+
+  .publicaciones{
+    padding-top:78px !important;
+    padding-bottom:78px !important;
   }
 }
 </style>
