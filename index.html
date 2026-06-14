@@ -437,4 +437,23 @@ p{margin:0;color:var(--gris);font-size:16px;line-height:1.75}.section p+p{margin
   sections.forEach(section=>navObs?.observe(section));
 })();
 </script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(){
+    const enfoque = document.querySelector("#enfoque");
+
+    if(!enfoque) return;
+
+    const observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          enfoque.classList.add("play-steps");
+        }
+      });
+    }, {
+      threshold: 0.35
+    });
+
+    observer.observe(enfoque);
+  });
+</script>
 </body></html>
