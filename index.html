@@ -489,12 +489,30 @@ p{margin:0;color:var(--gris);font-size:16px;line-height:1.75}.section p+p{margin
     const header = document.querySelector(".header");
 
     const sectionTargets = {
-      "#firma": "#firma .twocol",
-      "#servicios": "#servicios .center",
-      "#enfoque": "#enfoque .center",
-      "#publicaciones": "#publicaciones .center",
-      "#socios": "#socios .center",
-      "#contacto": "#contacto .center, #contacto .cta-grid"
+      "#firma": {
+        selector: "#firma .twocol",
+        offset: 95
+      },
+      "#servicios": {
+        selector: "#servicios .center",
+        offset: 28
+      },
+      "#enfoque": {
+        selector: "#enfoque .center",
+        offset: 145
+      },
+      "#publicaciones": {
+        selector: "#publicaciones .center",
+        offset: 28
+      },
+      "#socios": {
+        selector: "#socios .center",
+        offset: 135
+      },
+      "#contacto": {
+        selector: "#contacto .center, #contacto .cta-grid",
+        offset: 40
+      }
     };
 
     document.querySelectorAll('a[href^="#"]').forEach(function (link) {
@@ -503,19 +521,20 @@ p{margin:0;color:var(--gris);font-size:16px;line-height:1.75}.section p+p{margin
 
         if (!sectionTargets[href]) return;
 
-        const target = document.querySelector(sectionTargets[href]);
+        const config = sectionTargets[href];
+        const target = document.querySelector(config.selector);
+
         if (!target) return;
 
         e.preventDefault();
 
         const headerHeight = header ? header.offsetHeight : 82;
-        const extraSpace = 28;
 
         const targetTop =
           target.getBoundingClientRect().top +
           window.pageYOffset -
           headerHeight -
-          extraSpace;
+          config.offset;
 
         window.scrollTo({
           top: targetTop,
