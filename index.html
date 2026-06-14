@@ -247,6 +247,112 @@ p{margin:0;color:var(--gris);font-size:16px;line-height:1.75}.section p+p{margin
     padding-bottom:78px !important;
   }
 }
+/* Ajuste sección "Así trabajamos" a pantalla completa */
+#enfoque{
+  min-height:calc(100vh - 82px) !important;
+  scroll-margin-top:82px !important;
+  display:flex !important;
+  align-items:center !important;
+  padding-top:70px !important;
+  padding-bottom:70px !important;
+}
+
+#enfoque .container{
+  width:100% !important;
+}
+
+/* Agrandar línea de tiempo */
+#enfoque .steps,
+#enfoque .process,
+#enfoque .timeline{
+  margin-top:64px !important;
+  max-width:1180px !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+
+#enfoque .step{
+  transform:scale(1.08);
+}
+
+#enfoque .num{
+  width:38px !important;
+  height:38px !important;
+  font-size:15px !important;
+  box-shadow:0 14px 34px rgba(8,15,70,.22) !important;
+}
+
+#enfoque .icon{
+  width:32px !important;
+  height:32px !important;
+  margin-top:20px !important;
+  margin-bottom:16px !important;
+}
+
+#enfoque .step h3{
+  font-size:26px !important;
+  margin-bottom:12px !important;
+}
+
+#enfoque .step p{
+  font-size:16px !important;
+  line-height:1.7 !important;
+}
+
+/* Animación secuencial de pasos */
+#enfoque .step{
+  opacity:0;
+  transform:translateY(24px) scale(1.04);
+  transition:
+    opacity .65s ease,
+    transform .65s ease;
+}
+
+#enfoque.play-steps .step{
+  opacity:1;
+  transform:translateY(0) scale(1.08);
+}
+
+#enfoque.play-steps .step:nth-of-type(1){
+  transition-delay:.10s;
+}
+
+#enfoque.play-steps .step:nth-of-type(2){
+  transition-delay:.35s;
+}
+
+#enfoque.play-steps .step:nth-of-type(3){
+  transition-delay:.60s;
+}
+
+#enfoque.play-steps .step:nth-of-type(4){
+  transition-delay:.85s;
+}
+
+/* Versión móvil */
+@media(max-width:700px){
+  #enfoque{
+    min-height:auto !important;
+    padding-top:78px !important;
+    padding-bottom:78px !important;
+  }
+
+  #enfoque .step{
+    transform:none;
+  }
+
+  #enfoque.play-steps .step{
+    transform:translateY(0) scale(1);
+  }
+
+  #enfoque .step h3{
+    font-size:24px !important;
+  }
+
+  #enfoque .step p{
+    font-size:15px !important;
+  }
+}
 </style>
 </head>
 <body>
