@@ -192,6 +192,77 @@ img{display:block;max-width:100%}
 .article-hero{
   padding-top:110px !important;
 }
+/* Barra superior de artículos idéntica a página principal */
+@media(min-width:701px){
+  .header{
+    padding:4px 0 !important;
+    height:auto !important;
+    min-height:66px !important;
+    background:#ffffff !important;
+    box-shadow:0 18px 45px rgba(8,15,70,.08) !important;
+  }
+
+  .header-inner{
+    min-height:58px !important;
+    width:min(1180px, calc(100% - 56px)) !important;
+    margin:0 auto !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+    gap:28px !important;
+  }
+
+  .brand{
+    display:flex !important;
+    align-items:center !important;
+    flex:0 0 auto !important;
+  }
+
+  .brand img{
+    width:135px !important;
+    max-width:135px !important;
+    height:auto !important;
+    display:block !important;
+  }
+
+  .nav{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    gap:30px !important;
+    flex:1 1 auto !important;
+  }
+
+  .nav a{
+    font-size:14px !important;
+    font-weight:800 !important;
+    color:#080f46 !important;
+    text-decoration:none !important;
+    padding:18px 0 !important;
+    line-height:1 !important;
+  }
+
+  .header .btn,
+  .header .btn-primary,
+  .header a.btn,
+  .header a[href="#contacto"],
+  .header a[href="/#contacto"]{
+    flex:0 0 auto !important;
+    padding:16px 28px !important;
+    min-height:auto !important;
+    font-size:14px !important;
+    font-weight:800 !important;
+    line-height:1.2 !important;
+    border-radius:10px !important;
+    background:#080f46 !important;
+    color:#ffffff !important;
+    box-shadow:0 18px 42px rgba(8,15,70,.18) !important;
+  }
+
+  .article-hero{
+    padding-top:105px !important;
+  }
+}
 </style>
 </head>
 <body>
@@ -202,6 +273,7 @@ img{display:block;max-width:100%}
       <a href="/#inicio">Inicio</a>
       <a href="/#firma">Firma</a>
       <a href="/#servicios">Servicios</a>
+      <a href="/#enfoque">Enfoque</a>
       <a href="/#publicaciones">Publicaciones</a>
       <a href="/#socios">Socios</a>
       <a href="/#contacto">Contacto</a>
